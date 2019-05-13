@@ -1,0 +1,47 @@
+.change-phone {
+  padding: 0 32rpx;
+}
+.change-phone .input-box {
+  height: 64rpx;
+  line-height: 64rpx;
+  border-bottom: 1px solid #EEEEEE;
+  margin-top: 45rpx;
+}
+.change-phone .input-box .input-text {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 32rpx;
+}
+.change-phone .code-num {
+  position: relative;
+}
+.change-phone .code-num .get-code {
+  width: 200rpx;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #00C8FD;
+  font-size: 28rpx;
+  z-index: 1000;
+}
+.change-phone .code-num .colorGrey {
+  color: #999;
+}
+.change-phone .confirm-btn {
+  width: 686rpx;
+  height: 88rpx;
+  border-radius: 4rpx;
+  color: #fff;
+  background: #00C8FD;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 36rpx;
+  margin-top: 72rpx;
+}
+

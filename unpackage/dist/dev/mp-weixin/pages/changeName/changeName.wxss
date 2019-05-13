@@ -1,0 +1,58 @@
+.change-name .input-box {
+  width: 686rpx;
+  height: 92rpx;
+  line-height: 92rpx;
+  margin: 0 auto;
+  background: #F4F4F4;
+  border-radius: 8rpx;
+  position: relative;
+}
+.change-name .input-box .input-text {
+  display: block;
+  height: 92rpx;
+  line-height: 92rpx;
+  padding: 0 32rpx;
+  font-size: 28rpx;
+  padding-right: 70rpx;
+}
+.change-name .input-box .clear {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADIUlEQVRYR82XP0wTYRjGn+c41BYHTVAHTDRGRidJjEajgxoCzi6uEHfC3QF1uEFK7ivpbFBHN91AiS6ICU7q4GKEQRMdVAwmSk9z5V7zVVpLbXvXUsBbmrt+7/P87vvz3vsSMa9sNpvI5/N9InIVQDfJTgAHAYQi8pXksoi8AfDA9/1p13V/xpFm1KB0On3ANM00gGsAElHj1//3AdzL5/NjY2NjX+rF1ARwXddMJBIOyVEAHTGNK4etisiE7/ue67r5ahpVASYmJvYbhjFN8kyTxhvCRGQhDMMro6OjK5V6/wAopbpF5DHJo60wL2qIyDuSl23bXizX3QAwPj5+qL29/QWArlaal2l9DILgZCqV+lR8VgLIZDIdYRg+J3lii8wLsiLy2jCM05Zlrer7EoBSygNgb6V5mbaybdspAWSz2a4gCJZI7tkOABHROaLbcZwPhRlQSt0GMBBhrs+2CaA9YlwAQB+5ujlDRO46jjNA13V3JZPJbxEBfhiGF0l2kJypAxGISL9hGPp3FsDuOrB+LpfbR6VUHwAtWu8qAIyMjCx4nnepBkTB3HGcJ5lM5oKIPIyaBQD9GuAWgOsx1t4n2WdZ1lwViErzqLcv2k1pgDkA52MA6CG/SPZWQOijVf7mcc213lMN8FbvyJgAGyCUUr0islY27Y2Ya61Fep63SjLZAMAGCH2zvuaNmuvQVQ3wneTenQAQkR8aYJHk8QYASvtAL4GOs217tplZEJElvQfmAZyLCdDqTfjsvziGO5uIdCpOJBIrESehmVQclQn/pGK99p7nTZEcrLcPRCRHUn+IWvIxAnDHtu3BAoCuhEzT1CXTtn2ODcM4YlnW51JB4nmeImnFPA2bGiYiGcdxCsVPCUA3HkEQzJPs2ZR6dPBL0zTPDg0N6friL4C+mZyc7FxbW3tF8nC0TlMj3huG0TM8PLxcjK5Vls+SPNaURY2gWGV5MVY3Jm1tbY8AnGoFREONSdFwPT9YJFMxKptanL6IjDfcmpWrrTcrN5tpToMguFHehFSjjOyOi0G12nMREQDLxfac5P1cLjcTtz3/DUb830ZiZMSXAAAAAElFTkSuQmCC) no-repeat;
+  background-size: 32rpx 32rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.change-name .tips {
+  width: 686rpx;
+  margin: 20rpx auto 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.change-name .tips text {
+  font-size: 24rpx;
+  color: #999999;
+}
+.change-name .confirm {
+  width: 686rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  color: #fff;
+  background: #00C8FD;
+  text-align: center;
+  line-height: 88rpx;
+  border-radius: 8rpx;
+  margin-top: 60rpx;
+}
+

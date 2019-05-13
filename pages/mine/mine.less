@@ -1,0 +1,237 @@
+
+	
+	page{
+		background: #f5f5f5;
+	}
+
+	.center {
+		flex-direction: column;
+		.blue-top{
+			width: 750upx;
+			height: 230upx;
+			background: #00C8FD;
+			border-radius: ~'0 0 350upx 350upx / 0 0 30upx 30upx';
+			margin-bottom: 160upx;
+			.user-card{
+				box-sizing: border-box;
+				width: 686upx;
+				height: 330upx;
+				background: #fff;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%,28upx);
+				border-radius: 20upx;
+				.card-top{
+					box-sizing: border-box;	
+					border-bottom: 1px solid #EEEEEE;
+					height: 190upx;
+					position: relative;
+					.user-top{
+						width: 100%;
+						position: absolute;
+						top: -28upx;
+						.user-pic{
+							display: block;
+							width: 120upx;
+							height: 120upx;
+							border-radius: 50%;
+							margin: 0 auto;
+						}
+						.user-board{
+							width: 100%;
+							display: flex;
+							justify-content: center;
+							margin-top: 20upx;
+							.user-name{
+								color: #1F1F1F;
+								font-size: 36upx;
+								font-weight: bold;
+								
+							}
+							.vip-icon{
+								display: block;
+								width: 44upx;
+								height: 44upx;
+								margin-left: 17upx;
+								margin-top: 2upx;
+							}
+						}
+					}
+					
+				}
+				.card-bottom{
+					box-sizing: border-box;
+					height: 140upx;
+					display: flex;
+					text-align: center;
+					padding: 18upx 0;
+					.left{
+						width: 50%;
+						border-right: 1px solid #eee;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						
+					}
+					.right{
+						width: 50%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+					.count{
+						color: #999999;
+						font-size: 36upx;
+						font-weight: bold;
+						margin-bottom: 10upx;
+						.num{
+							color: #1F1F1F;
+							display: inline;
+						}
+					}
+					.txt{
+						color: #1F1F1F;
+						font-size: 24upx;
+					}
+				}
+			}
+		}
+	}
+
+// 	.logo {
+// 		width: 750upx;
+// 		height: 200upx;
+// 		padding: 20upx 32upx;
+// 		box-sizing: border-box;
+// 		background-color: #fff;
+// 		flex-direction: row;
+// 		align-items: center;
+// 	}
+// 
+// 	.logo-img {
+// 		width: 122upx;
+// 		height: 122upx;
+// 		border-radius: 50%;
+// 	}
+// 
+// 	.logo-title {
+// 		height: 150upx;
+// 		flex: 1;
+// 		flex-direction: column;
+// 		align-items: left;
+// 		justify-content: center;
+// 		margin-left: 20upx;
+// 		.user-name {
+// 			line-height: 44upx;
+// 			font-size: 38upx;
+// 			color: #1f1F1f;
+// 			font-size: 28upx;
+// 			font-weight: bold;
+// 			.vip-icon{
+// 				width: 44upx;
+// 				height: 44upx;
+// 				vertical-align: middle;
+// 				margin-left: 20upx;
+// 			}
+// 		}
+// 		.score{
+// 			font-size: 28upx;
+// 			color: #1F1F1F;
+// 			line-height: 44upx;
+// 			text{
+// 				margin-left: 10upx;
+// 			}
+// 		}
+// 		.vip-date{
+// 			font-size: 28upx;
+// 			color: #1F1F1F;
+// 			line-height: 44upx;
+// 			text{
+// 				margin-left: 10upx;
+// 			}
+// 		}
+// 	}
+// 
+// 	
+// 
+// 	.login-title {
+// 		height: 150upx;
+// 		align-items: self-start;
+// 		justify-content: center;
+// 		flex-direction: column;
+// 		margin-left: 20upx;
+// 	}
+// 
+	.center-list {
+		display: flex;
+		background-color: #FFFFFF;
+		margin-top: 20upx;
+		width: 686upx;
+		flex-direction: column;
+		margin: 0 auto;
+		border-radius: 20upx;
+		overflow: hidden;
+	}
+
+	.center-list-item {
+		display: flex;
+		height: 114upx;
+		width: 686upx;
+		box-sizing: border-box;
+		flex-direction: row;
+		padding: 0upx 32upx;
+		border-bottom-width: 1px;
+		border-color: #EEEEEE;
+		border-bottom-style: solid;
+		&:last-child{
+			border-bottom: 0;
+		}
+		.recharge-icon{
+			background-image:url(../../static/images/recharge-icon.png);
+		}
+		.invite-icon{
+			background-image:url(../../static/images/invite-icon.png);
+		}
+		.security-icon{
+			background-image:url(../../static/images/security-icon.png);
+		}
+		.setting-icon{
+			background-image:url(../../static/images/setting-icon.png);
+		}
+		.feedback-icon{
+			background-image:url(../../static/images/feedback-icon.png);
+		}
+		.icon1{
+			display: block;
+			height: 114upx;
+			width: 50upx;
+			line-height: 114upx;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 50upx 50upx;
+			color: #555;
+			text-align: left;
+			margin-right: 18upx;
+		}
+	}
+
+	.list-text {
+		height: 114upx;
+		line-height: 114upx;
+		font-size: 28upx;
+		color: #1F1F1F;
+		flex: 1;
+		text-align: left;
+		font-size: 28upx;
+	}
+	/*右箭头*/
+	.icon2 {
+		display: block;
+		height: 114upx;
+		width: 40upx;
+		line-height: 114upx;
+		background: url(../../static/images/arrow-right.png) center center no-repeat;
+		background-size: 32upx 32upx;
+		color: #555;
+		text-align: right;
+	}

@@ -1,0 +1,89 @@
+.recharge{
+	.open-vip{
+		width: 686upx;
+		height: 238upx;
+		margin: 0 auto;
+		.open-vip-pic{
+			display: block;
+			width: 686upx;
+			height: 238upx;
+		}
+	}
+	.recharge-box{
+		margin-top: 40upx;
+		border-bottom: 20upx solid #F5F5F5;
+		padding-bottom: 20upx;
+		.recharge-way{
+			display: flex;
+			justify-content: center;
+			position: relative;
+			.way-item{
+				height: 370upx;
+			}
+			.way-title{
+				box-sizing: border-box;
+				color: #1F1F1F;
+				font-size: 32upx;
+				font-weight: bold;
+				margin: 0 50upx;
+				padding: 14upx 0;
+				&.current{
+					color: #F4B85A;
+					border-bottom: 4upx solid #F4B85A;
+				}
+			}
+			.list{
+				position: absolute;
+				width: 686upx;
+				left: 50%;
+				transform: translateX(-50%);
+				display: flex;
+				justify-content: left;
+				padding: 40upx 0upx;
+				.list-item{
+					width: 160upx;
+					height: 220upx;
+					border: 3upx solid #EEEEEE;
+					border-radius: 8upx;
+					text-align: center;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					margin: 0 8upx;
+					.name{
+						color: #1F1F1F;
+						font-size: 36upx;
+						font-weight: bold;
+					}
+					.amount{
+						color: #1F1F1F;
+						font-size: 28upx;
+					}
+					&.on{
+						border: 3upx solid #F4B85A;
+						.name{
+							color: #F4B85A;
+						}
+						.amount{
+							color: #F4B85A;
+						}
+					}
+				}
+			}
+		}
+	}
+	.wx-recharge{
+		width: 686upx;
+		height: 88upx;
+		background: #F4B85A;
+		color: #fff;
+		font-size: 28upx;
+		line-height: 88upx;
+		text-align: center;
+		border-radius: 8upx;
+		position: fixed;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 30upx;
+	}
+}

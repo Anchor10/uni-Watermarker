@@ -1,0 +1,115 @@
+.recharge .open-vip {
+  width: 686rpx;
+  height: 238rpx;
+  margin: 0 auto;
+}
+.recharge .open-vip .open-vip-pic {
+  display: block;
+  width: 686rpx;
+  height: 238rpx;
+}
+.recharge .recharge-box {
+  margin-top: 40rpx;
+  border-bottom: 20rpx solid #F5F5F5;
+  padding-bottom: 20rpx;
+}
+.recharge .recharge-box .recharge-way {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+.recharge .recharge-box .recharge-way .way-item {
+  height: 370rpx;
+}
+.recharge .recharge-box .recharge-way .way-title {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #1F1F1F;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin: 0 50rpx;
+  padding: 14rpx 0;
+}
+.recharge .recharge-box .recharge-way .way-title.current {
+  color: #F4B85A;
+  border-bottom: 4rpx solid #F4B85A;
+}
+.recharge .recharge-box .recharge-way .list {
+  position: absolute;
+  width: 686rpx;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 40rpx 0rpx;
+}
+.recharge .recharge-box .recharge-way .list .list-item {
+  width: 160rpx;
+  height: 220rpx;
+  border: 3rpx solid #EEEEEE;
+  border-radius: 8rpx;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 8rpx;
+}
+.recharge .recharge-box .recharge-way .list .list-item .name {
+  color: #1F1F1F;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+.recharge .recharge-box .recharge-way .list .list-item .amount {
+  color: #1F1F1F;
+  font-size: 28rpx;
+}
+.recharge .recharge-box .recharge-way .list .list-item.on {
+  border: 3rpx solid #F4B85A;
+}
+.recharge .recharge-box .recharge-way .list .list-item.on .name {
+  color: #F4B85A;
+}
+.recharge .recharge-box .recharge-way .list .list-item.on .amount {
+  color: #F4B85A;
+}
+.recharge .wx-recharge {
+  width: 686rpx;
+  height: 88rpx;
+  background: #F4B85A;
+  color: #fff;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 30rpx;
+}
+

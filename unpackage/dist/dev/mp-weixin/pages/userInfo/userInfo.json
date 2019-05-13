@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "编辑资料",
+  "usingComponents": {
+    "w-picker": "/components/w-picker/w-picker"
+  }
+}

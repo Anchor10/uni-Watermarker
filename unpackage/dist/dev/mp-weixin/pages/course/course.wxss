@@ -1,0 +1,24 @@
+.course {
+  padding: 20rpx 0;
+}
+.course .course1 {
+  width: 686rpx;
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+}
+.course .course1 .course1-pic {
+  display: block;
+  width: 686rpx;
+  height: 886rpx;
+}
+.course .course2 {
+  width: 686rpx;
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+}
+.course .course2 .course2-pic {
+  display: block;
+  width: 686rpx;
+  height: 886rpx;
+}
+

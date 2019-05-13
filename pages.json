@@ -1,0 +1,163 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationBarBackgroundColor":"transparent",
+				"navigationBarTextStyle":"white",
+				"navigationStyle":"custom"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				"navigationBarBackgroundColor":"#00C8FD",
+				"navigationBarTextStyle":"white"
+			}
+		}
+        ,{
+            "path" : "pages/login/login",
+            "style" : {
+				"navigationBarTitleText": "登录"
+			}
+        }
+        ,{
+            "path" : "pages/course/course",
+            "style" : {
+            	"navigationBarTitleText": "简单教程"
+            }
+        }
+        ,{
+            "path" : "pages/security/security",
+            "style" : {
+            	"navigationBarTitleText": "账号安全"
+            }
+        }
+        ,{
+            "path" : "pages/changePwd/changePwd",
+            "style" : {
+            	"navigationBarTitleText": "修改密码"
+            }
+        }
+        ,{
+            "path" : "pages/changePhone/changePhone",
+            "style" : {
+            	"navigationBarTitleText": "更换手机号"
+            }
+        }
+        ,{
+            "path" : "pages/feedback/feedback",
+            "style" : {
+            	"navigationBarTitleText": "意见反馈"
+            }
+        }
+        ,{
+            "path" : "pages/setting/setting",
+            "style" : {
+            	"navigationBarTitleText": "设置"
+            }
+        }
+        ,{
+            "path" : "pages/about/about",
+            "style" : {
+            	"navigationBarTitleText": "关于我们"
+            }
+        }
+        ,{
+            "path" : "pages/register/register",
+            "style" : {
+            	"navigationBarTitleText": "注册"
+            }
+        }
+        ,{
+            "path" : "pages/forget/forget",
+            "style" : {
+            	"navigationBarTitleText": "忘记密码"
+            }
+        }
+        ,{
+            "path" : "pages/recharge/recharge",
+            "style" : {
+            	"navigationBarTitleText": "充值"
+            }
+        }
+        ,{
+            "path" : "pages/userInfo/userInfo",
+            "style" : {
+            	"navigationBarTitleText": "编辑资料"
+            }
+        },
+		{
+		    "path" : "pages/webview/webview",
+		    "style" : {
+		    	"navigationBarTitleText": "微信充值"
+		    }
+		}
+        ,{
+            "path" : "pages/changeName/changeName",
+            "style" : {
+            	"navigationBarTitleText": "修改昵称"
+            }
+        }
+        ,{
+            "path" : "pages/changeSign/changeSign",
+            "style" : {
+            	"navigationBarTitleText": "修改签名"
+            }
+        }
+        ,{
+            "path" : "pages/upload/upload",
+            "style" : {
+            	"navigationBarTitleText": "头像选择"
+            }
+        }
+        ,{
+            "path" : "pages/downApp/downApp",
+            "style" : {
+            	"navigationBarTitleText": "App下载提示"
+            }
+        }
+        ,{
+            "path" : "pages/invite/invite",
+            "style" : {
+            	"navigationBarTitleText": "邀请有礼",
+				"navigationBarBackgroundColor":"#00C8FD",
+				"navigationBarTextStyle":"white"
+            }
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "去水印工具",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+        "color": "#CBCBD5",
+        "selectedColor": "#00C8FD",
+        "borderStyle": "black",
+        "backgroundColor": "#ffffff",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "iconPath": "static/images/home.png",
+            "selectedIconPath": "static/images/home-selected.png",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/mine/mine",
+            "iconPath": "static/images/mine.png",
+            "selectedIconPath": "static/images/mine-selected.png",
+            "text": "我的"
+        }]
+    },
+	"condition": {
+		"current": 0,
+		"list": [{
+				"name": "test",
+				"path": "pages/mine/mine"
+			}
+		]
+	}
+	
+}

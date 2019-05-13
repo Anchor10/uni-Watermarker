@@ -1,0 +1,1 @@
+<view class="setting" bind:__l="__l"><view class="center-list"><view data-event-opts="{{[['tap',[['toAbout',['$event']]]]]}}" class="center-list-item" bindtap="__e"><text class="list-text">关于我们</text><text class="icon2"></text></view></view><view data-event-opts="{{[['tap',[['loginOut',['$event']]]]]}}" class="login-out" bindtap="__e">退出</view></view>

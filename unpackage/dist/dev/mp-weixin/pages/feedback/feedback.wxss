@@ -1,0 +1,46 @@
+.feedback .text-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 686rpx;
+  min-height: 364rpx;
+  background: #F4F4F4;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  margin-top: 60rpx;
+  padding: 20rpx;
+}
+.feedback .text-box .input-text {
+  font-size: 28rpx;
+  width: 686rpx;
+  height: 364rpx;
+}
+.feedback .number {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 686rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  margin: 0 auto;
+  background: #F4F4F4;
+  border-radius: 8rpx;
+  margin-top: 32rpx;
+  padding: 20rpx;
+}
+.feedback .number .number-text {
+  font-size: 28rpx;
+  width: 100%;
+  height: 100%;
+}
+.feedback .submit {
+  width: 686rpx;
+  height: 88rpx;
+  margin: 0 auto;
+  line-height: 88rpx;
+  background: #00C8FD;
+  color: #fff;
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 128rpx;
+  border-radius: 4rpx;
+}
+

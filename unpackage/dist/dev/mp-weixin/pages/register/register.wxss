@@ -1,0 +1,161 @@
+.register {
+  padding: 0 32rpx;
+}
+.register .input-box {
+  height: 64rpx;
+  line-height: 64rpx;
+  border-bottom: 1px solid #EEEEEE;
+  margin-top: 45rpx;
+}
+.register .input-box .input-text {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 32rpx;
+}
+.register .code-num {
+  position: relative;
+}
+.register .code-num .get-code {
+  width: 200rpx;
+  text-align: center;
+  height: 64rpx;
+  line-height: 64rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #00C8FD;
+  font-size: 28rpx;
+  z-index: 1000;
+}
+.register .code-num .colorGrey {
+  color: #999;
+}
+.register .agreement {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 72rpx;
+  height: 60rpx;
+}
+.register .agreement .agreement-text {
+  font-size: 24rpx;
+  color: #999999;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+.register .agreement .agreement-text text {
+  color: #00C8FD;
+}
+.register .agreement .checkbox {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+}
+.register .agreement .checkbox checkbox {
+  background-image: none;
+}
+.register .agreement .checkbox checkbox .wx-checkbox-input {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABbklEQVRoQ+2arU7EQBSF7+mWYKBixuD2DdAgMCgegPAKSAJZFGJRKwmSZ8DzAiSIDS+BgqRJO00q2BCYS4Yfs1l3uk3FranpOXfm+8ZNUZbl1mg0OgUwEZEdGfAD4ENV5zHGS+/9M4CIuq6vRGQqIhsDXvvy0l5F5MQ595Q28DZ08surB/AZY5x576dpA/r/gXMOQ7YQQjhT1du0xvT23p/bBvo0Zgb6pL1qlhkwAyQBO0IkQDpuBmiEZIEZIAHScTNAIyQLzAAJkI6bARohWWAGSIB03AzQCMkCM0ACpONmgEZIFpgBEiAdNwM0QrLADJAA6bgZoBGSBWaABEjHzQCNkCxYaSCEsFDVzdQN4Jqcsda4qu6JyNHvNbHeeO8n6Z74UUQO1jq543JVfQdw4Zy7Q1VV+wDu/343yDue1XVdIr8AMM/z/LgoigqqmjVNsxtjPMyybLvriR33fanqS9u2D+PxOPwc+44H9F73DSdCrE90gFKXAAAAAElFTkSuQmCC);
+  background-position: center center;
+  background-size: 32rpx 32rpx;
+  background-color: #fff;
+  border: 0;
+}
+.register .agreement .checkbox checkbox .wx-checkbox-input-checked {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  top: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAFC0lEQVRoQ+2ay28bVRTGfzdO4rHTkMQGuilJ2rQkqUqqqItG6ooFIBD0Qcure8QWCSSE2LGJAKniD0AlFYLAEhbQJqilD5K0iMcGNkhICPFoYid+Jk3t8UXHdyaM7ThxMqZJJF9pJNu6j/Od7zvfuSNZMWP/AbSzs0YBeJ+RwNuKaTuHonlnxY8GzjESeF0xY6d2KAPvMhJ4UwAkgI4dxoCN4h2OBt5qANgi5hoMbFHiV45tMNBgwGcGtpmEpK/KIxcE5UBr8nyuRLsNAEjAzpCYA84jP9nyKIOpytg+AAIK9gThSBgGQqpIws+Lmu+z8E8OCi4KlxmDaIsBOEFJ1nsseLJTcaILjrSZ6KbS8HEMLiU1CzlHStsCgJtNbSTTa8GJqOKFiOJQGMJNRjZpG75Y0Iz+qfklC1TWwxYx4BRrs4IDIXi6C56LKoZCiqAE6Rk30prXftfckruybwCuS8gB8lnodJ9a/dAT/L4QnOxSnI7A4XBp8DItY8Pn85rRv+rBgEO76xQSrxSaPMVRqs1KOF7ZKOgLwbMRxfNRxaAFlifzMnW5ANMZzQez8FXCTw14PEzo3WtBv2XY/G0Zfl2CxRUUawDxZL4/DMe74ExR84rWMvCS+ZsZzadxE/zfd6smqoYacA62AhQL7IkOONauENv7Mau5lITvMobuqkw4e7Qo2O9k/lSX7FcpmyUJPgsfxTQT3uBXZ7hGAAXoDcEru43NdbcqlIJ4XvNtGsbmdNHyxDVKupJHNm7BStalYB+2KClYrWFZw3RacyEGF5Oa2bsgvxfpXn3UDmC4Hd7rVjx6n6LJk414TnMlBZ/ENZdTkMyXnaShpQkOhiiCPx1RDIYVwoZ3pPNG8yKbLxOa2+L769dX7QCG2mF0j+KxztLDJUOZgmYiCednNdczkPYcLoGK5iXzAuBgSNHqLVgN2YJoHi7ENJNJzW038+s7XI0ANHRb8PKDijMR2G8pRBLuEBAJG66kNOfnNDccJmTOQNh4vGT+QJCK4EU210U2czCR1MwJ+LVl4yWuRgBAWMGhNjgVMTLYFzSF7B3zec3VlCnAW2nY3QLHZX5U0W9VyiaVh6mMZjwOFxNG8yt2vJ4tm4NrAOBGWKBod8O74GxU8UxE8VArFUyInMT6rqWgJ6h4vAMGq8hGCn8sprksBZtzCnZ92WyQgRWdGGql4Qy1wdn7FU91wt5gpZwWbBNQe0DxQHOlbO5oA3AsBpMJTVwKv3bZbBKALHP8XBra4TbppOYq0FdWE1VND3EpU+jjRZ+HmHvLlEW1ycYnAAeIyGloF7wYFXdR9ASpsEbvScatTMF+OKf5JuUE771TrYV8031gtYUOEwLikTZ4KaqKN8pqTEjwIhvpFxL810lIuFZbvUnVAmcDRVy+nQeE1MTJiDiUdNjSmpBlC3mj+fG4+DzM+5ONDwmVaML5Ip3WsVi5WYqc+hy/l8wv2CB3erluXE07wfuTTZ0AlLmTyEmalrAgchqw4E4BJlPwWdz0hzrJps4APO7U3GTesIbD0BtULBU0Py3CDxlIll/0alH4+nN81MBqcnIujsKGvOuKUnIavPeyTVjlWjDqBKAcTPkLzsa66/p5/2/G/wBgI8f7n9sA4D+H/nZoMOAvf/5XNxjwn0N/O5QwIC90Lf72u+erPX81uGln0QTveQj+DtQoznE08IZiyn4VtQMBFAozHGu5tvGXOX+Zq/vqfwHTwqVPCPZ2dQAAAABJRU5ErkJggg==);
+  background-position: center center;
+  background-size: 32rpx 32rpx;
+  background-color: #fff;
+  border: 0;
+}
+.register .agreement .checkbox checkbox .wx-checkbox-input-checked::before {
+  display: none;
+}
+.register .register-btn {
+  width: 686rpx;
+  height: 88rpx;
+  border-radius: 4rpx;
+  color: #fff;
+  background: #00C8FD;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 36rpx;
+  margin-top: 30rpx;
+}
+.register .agreement-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.register .agreement-box {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 586rpx;
+  height: 1000rpx;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  padding: 20rpx 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1001;
+  background: #fff;
+  border-radius: 8rpx;
+  position: relative;
+}
+.register .agreement-box .close {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADIUlEQVRYR82XP0wTYRjGn+c41BYHTVAHTDRGRidJjEajgxoCzi6uEHfC3QF1uEFK7ivpbFBHN91AiS6ICU7q4GKEQRMdVAwmSk9z5V7zVVpLbXvXUsBbmrt+7/P87vvz3vsSMa9sNpvI5/N9InIVQDfJTgAHAYQi8pXksoi8AfDA9/1p13V/xpFm1KB0On3ANM00gGsAElHj1//3AdzL5/NjY2NjX+rF1ARwXddMJBIOyVEAHTGNK4etisiE7/ue67r5ahpVASYmJvYbhjFN8kyTxhvCRGQhDMMro6OjK5V6/wAopbpF5DHJo60wL2qIyDuSl23bXizX3QAwPj5+qL29/QWArlaal2l9DILgZCqV+lR8VgLIZDIdYRg+J3lii8wLsiLy2jCM05Zlrer7EoBSygNgb6V5mbaybdspAWSz2a4gCJZI7tkOABHROaLbcZwPhRlQSt0GMBBhrs+2CaA9YlwAQB+5ujlDRO46jjNA13V3JZPJbxEBfhiGF0l2kJypAxGISL9hGPp3FsDuOrB+LpfbR6VUHwAtWu8qAIyMjCx4nnepBkTB3HGcJ5lM5oKIPIyaBQD9GuAWgOsx1t4n2WdZ1lwViErzqLcv2k1pgDkA52MA6CG/SPZWQOijVf7mcc213lMN8FbvyJgAGyCUUr0islY27Y2Ya61Fep63SjLZAMAGCH2zvuaNmuvQVQ3wneTenQAQkR8aYJHk8QYASvtAL4GOs217tplZEJElvQfmAZyLCdDqTfjsvziGO5uIdCpOJBIrESehmVQclQn/pGK99p7nTZEcrLcPRCRHUn+IWvIxAnDHtu3BAoCuhEzT1CXTtn2ODcM4YlnW51JB4nmeImnFPA2bGiYiGcdxCsVPCUA3HkEQzJPs2ZR6dPBL0zTPDg0N6friL4C+mZyc7FxbW3tF8nC0TlMj3huG0TM8PLxcjK5Vls+SPNaURY2gWGV5MVY3Jm1tbY8AnGoFREONSdFwPT9YJFMxKptanL6IjDfcmpWrrTcrN5tpToMguFHehFSjjOyOi0G12nMREQDLxfac5P1cLjcTtz3/DUb830ZiZMSXAAAAAElFTkSuQmCC) center center no-repeat;
+  background-size: 60rpx 60rpx;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 20rpx;
+  z-index: 1002;
+}
+.register .agreement-box .agreement-title {
+  text-align: center;
+  font-size: 16px;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #00C8FD;
+  font-weight: bold;
+}
+.register .agreement-box .agreement-content {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 586rpx;
+  height: 830rpx;
+  overflow: auto;
+  padding: 20rpx 40rpx;
+}
+

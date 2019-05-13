@@ -1,0 +1,1 @@
+<view class="down-app" bind:__l="__l"><view class="down-tips"><view class="tips-pic _i"></view>小程序暂不支持充值，请前往下载App进行充值。</view><view class="content-box"><image class="logo-pic" src="../../static/images/logo.png" mode></image><text class="app-name">Biu去水印</text><text class="app-version">V1.0.0</text></view><button class="down-btn" open-type="contact">点击前往下载App</button></view>

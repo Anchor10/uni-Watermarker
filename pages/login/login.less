@@ -1,0 +1,82 @@
+.login{
+	padding: 0 32upx;
+	.input-box{
+		height: 64upx;
+		line-height: 64upx;
+		border-bottom:1px solid #EEEEEE;
+		margin-top:45upx;
+		.input-text{
+			height: 64upx;
+			line-height: 64upx;
+			font-size: 32upx;
+		}
+	}
+	.section-box{
+		display: flex;
+		justify-content: space-between;
+		font-size: 28upx;
+		margin-top: 28upx;
+		.remember{
+			color: #343434;
+			display:flex;
+			text{
+				margin-left: 18upx;
+			}
+			.checkbox{
+				display: block;
+				width: 32upx;
+				height: 32upx;
+				checkbox{
+					background-image:none;
+				}
+				checkbox .wx-checkbox-input{
+					display: block;
+					width: 32upx;
+					height: 32upx;
+					background-image: url(../../static/images/select-no.png);
+					background-position: center center;
+					background-size: 32upx 32upx;
+					background-color: #fff;
+					border: 0;
+				}
+				checkbox .wx-checkbox-input-checked{
+					display: block;
+					width: 32upx;
+					height: 32upx;
+					background-image: url(../../static/images/selected.png);
+					background-position: center center;
+					background-size: 32upx 32upx;
+					background-color: #fff;
+					border: 0;
+				}
+				checkbox .wx-checkbox-input-checked::before{
+					display: none;
+				}
+			}
+		}
+		.forget{
+			color: #00C8FD;
+		}
+	}
+	.btns{
+		display: flex;
+		justify-content: space-between;
+		margin-top: 67upx;
+		.btn{
+			width: 326upx;
+			height: 88upx;
+			border: 1px solid #00C8FD;
+			font-size: 36upx;
+			text-align: center;
+			line-height: 88upx;
+			border-radius: 8upx;
+		}
+		.register-btn{
+			color: #00C8FD;
+		}
+		.login-btn{
+			color: #fff;
+			background: #00C8FD;
+		}
+	}
+}

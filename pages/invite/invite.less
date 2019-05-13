@@ -1,0 +1,163 @@
+page{
+	background: #f0f2f5;
+}
+.invite{
+	background: #f0f2f5;
+	height: 100%;
+	overflow: hidden;
+	.blue-top{
+		width: 750upx;
+		height: 250upx;
+		background: #00C8FD;
+		border-radius: ~'0 0 350upx 350upx / 0 0 30upx 30upx';
+		margin-bottom: 180upx;
+		.invite-card{
+			width: 686upx;
+			height: 359upx;
+			background: #fff;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%,30upx);
+			border-radius: 20upx;
+			.card-top{
+				box-sizing: border-box;
+				padding: 36upx 29upx;
+				border-bottom: 1px solid #EEEEEE;
+				height: 215upx;
+				.user-title{
+					display: flex;
+					justify-content: left;
+					.user-icon{
+						display: block;
+						width: 32upx;
+						height: 32upx;
+						margin-right: 18upx;
+						background: url(../../static/images/user-icon.png) center center no-repeat;
+						background-size: 32upx 32upx;
+					}
+					.phone-number{
+						font-weight: bold;
+						color: #181818;
+						font-size: 28upx;
+					}
+				}
+				.invite-code{
+					color: #181818;
+					font-size: 32upx;
+					font-weight: 600;
+					margin-top: 20upx;
+				}
+				.grade-now{
+					color: #181818;
+					font-size: 28upx;
+					margin-top: 20upx;
+					.left{
+						margin-right: 76upx;
+					}
+					.right{
+						
+					}
+				}
+			}
+			.card-bottom{
+				height: 140upx;
+				display: flex;
+				text-align: center;
+				.left{
+					height: 140upx;
+					width: 50%;
+					border-right: 1px solid #eee;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					
+				}
+				.right{
+					height: 140upx;
+					width: 50%;
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
+				.count{
+					color: #999999;
+					font-size: 36upx;
+					font-weight: bold;
+					margin-bottom: 16upx;
+					.num{
+						color: #00C8FD;
+						display: inline;
+					}
+				}
+				.txt{
+					color: #181818;
+					font-size: 24upx;
+				}
+			}
+		}
+	}
+	.task{
+		box-sizing: border-box;
+		width: 686upx;
+		margin: 0 auto;
+		background: #fff;
+		min-height: 500upx;
+		border-radius: 20upx;
+		padding: 30upx;
+		.task-title{
+			color: #00C8FD;
+			font-weight: bold;
+			font-size: 32upx;
+		}
+		.task-text{
+			font-size: 24upx;
+			color: #181818;
+			line-height: 40upx;
+			margin-top: 10upx;
+		}
+		.task-list{
+			.task-item{
+				display: flex;
+				margin-top: 32upx;
+				.task-pic{
+					display: block;
+					width: 96upx;
+					height: 96upx;
+					background-size: 70upx auto;
+					background-position: center center;
+					background-repeat: no-repeat;
+					background-color: #dcf8ff;
+					margin-right: 20upx;
+				}
+				.task-desc{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					.title{
+						color: #00C8FD;
+						font-size: 28upx;
+						font-weight: bold;
+						margin-bottom: 10upx;
+					}
+					.desc{
+						color: #181818;
+						font-size: 24upx;
+					}
+				}
+			}
+		}
+	}
+	.invite-btn{
+		width: 686upx;
+		height: 88upx;
+		background: #00C8FD;
+		border-radius: 8upx;
+		line-height: 88upx;
+		text-align: center;
+		color: #fff;
+		margin: 0 auto;
+		margin-top: 40upx;
+		margin-bottom: 40upx;
+		border: 0;
+	}
+}

@@ -1,0 +1,204 @@
+page {
+  background: #f0f2f5;
+}
+.invite {
+  background: #f0f2f5;
+  height: 100%;
+  overflow: hidden;
+}
+.invite .blue-top {
+  width: 750rpx;
+  height: 250rpx;
+  background: #00C8FD;
+  border-radius: 0 0 350rpx 350rpx / 0 0 30rpx 30rpx;
+  margin-bottom: 180rpx;
+}
+.invite .blue-top .invite-card {
+  width: 686rpx;
+  height: 359rpx;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%, 30rpx);
+      -ms-transform: translate(-50%, 30rpx);
+          transform: translate(-50%, 30rpx);
+  border-radius: 20rpx;
+}
+.invite .blue-top .invite-card .card-top {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 36rpx 29rpx;
+  border-bottom: 1px solid #EEEEEE;
+  height: 215rpx;
+}
+.invite .blue-top .invite-card .card-top .user-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+.invite .blue-top .invite-card .card-top .user-title .user-icon {
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 18rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAACN1BMVEVHcEwAyP0AAP8Ax/0Ax/0AyP0AyP0Ax/0AyP0Av/8Ayf8AyP0AyP0Ayf8AyP0AzP8AyP8Av/8Ax/wAyP0A//8AyP0Ax/wAyP0Ayf0A//8Aqv8AyP0Ax/wAyf8AyP0AgP8Axv8Ayf8Ax/8Ax/0Ayf4Ayv8AyP8AyP0Ax/0Ayf4Ax/0Ayf0Ax/0AyP0AyP8AyP0AyP0AyP0AyP4AyP0Axf8Ax/wAyP4Ax/sAyf0Axv8Az/8AyvQAyv8AyP0AyPsAyP0AxfcAyf8AuegAx/wAx/0AyP0Ax/sAyP0Ax/wAx/0Axv8Axv0AyP4AyP0AxvsAyPwAxvwAyP8Ax/wAs/8AyPwAx/8Ax/0Ayf8AyP4AyP0Ayf0Ax/0AxvsAxfsAx/0AxP8Ax/8Ayf0AyP4AyPwAyP0AyP0AyP0Ayf0AyP0Ayf4Axf8AyP8A2/8AzP8Axv8Ax/0AyP8AyPwAyP4Ayv8AyP0AyP0Axv0AyP4Ax/wAyPoAtv8Av98Ax/sAx/wAyP0Ax/0Auf8AyPwAyf4Axv8Axv8AyP0AyP0AyP0AyP0Ax/0AyP4Ax/wAx/8AyP0AyP4Ayf0Ayf8AyP4AyP4AzP8Atv8Ax/wAx/kAyPkAyP4Ax/4AxvwAyf4AyPwAyP4AyP0AvPIAyfwAx/0Ayf0AyP8AyPQAv/8AyPwAyf4Aw/8AyP0Ay/8AyPwAyP0AxPsAv/8Ax/wAyfwAx/oAyf8AzP8Ax/4AyP0AyPwAyf4Aw/gAyP0AxvwAxv8AyP1aabpkAAAAvHRSTlMA4gH8ifH7iP4EE/PtUN4FDgxJ7AHZUuv4AgOHuzmhAhsmIPjFHXT9hcH7iNzyT/zb9M3uFk3pO6JREBgw3UbwH1kLxfLYifez9yRs2dE6q1ElWwqoRG0hrKiYf0dCmw1fluyvkdSM/c+8Hy4HCkPSYkq9NczmddLAOAcIkbWdnAtTxi0o6X1v5WmxyTvg821o7a8PDmApLrmtWepd5eQTXpPqahcIYbgR+Se5mDwQo1pxlhm230/vJuhMOj7ZV50AAAIZSURBVEjHY2BAA/xLli3X3QME+gZr1gowEASrNHT2wIHh6g3rCKjX41u5Bxmwrl+BT7m82MQ96GDSZHzmM+7BBLUOONW3tGJRv4ctpQqH+mrnPViBbjEODY0u2DXskcGuPreOA4cGNj+sGhQY9+ACFlg1xHDg1GBrhU1DG071e8xssGmIA8txoAOQoLEdNg1yYA180tosCKC9kBucQCyxaYgCa+jmRAFKrCBBe1NsGqLBGuaqogjyggWFzbFpEAI713AqiqAMWAOjNTYNqh1gT8/gQhKbpQXW4CGCTYNgCCQi1HJgIkzTeyEhF4A14pgcwSGyJz1REZpZxYwg0dDEiT0xCWRA5Jl9270kGYJD/YUhfIlYXPmhhxsWtcx8+TwwtrpcA84ctGA2lnShqYg7i3JO6MNQr6KAt9SYswgtK8ycj7fUmNY/D1WDVhfvFDwa1AyU0V2kzqMpi0O1SHMF9tzAs1gQq4YCUZwZKCIbU7mkNCvuHKdfooSuXsrbcw8+IMqFpiFIfA9+oBKIor4yiYD6Pcz1TsjJrnwPQcCWh+SBMHfCGva4IrxhkrqHGFAD15BAlPo9peFQ9Ut1iNMgUcYELS6IU7+HIzkeomETkRr2+GRBSgsjYjUoQ9Ltjq3EatjTCdaweyfRGtIgfjYmWkMkWMM2VqI1FIE17NpOtIZMSMLYQqx6cV5IPGzeyMJOBHDTKOQHqgYAzauFFf5tUBYAAAAASUVORK5CYII=) center center no-repeat;
+  background-size: 32rpx 32rpx;
+}
+.invite .blue-top .invite-card .card-top .user-title .phone-number {
+  font-weight: bold;
+  color: #181818;
+  font-size: 28rpx;
+}
+.invite .blue-top .invite-card .card-top .invite-code {
+  color: #181818;
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-top: 20rpx;
+}
+.invite .blue-top .invite-card .card-top .grade-now {
+  color: #181818;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.invite .blue-top .invite-card .card-top .grade-now .left {
+  margin-right: 76rpx;
+}
+.invite .blue-top .invite-card .card-bottom {
+  height: 140rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+.invite .blue-top .invite-card .card-bottom .left {
+  height: 140rpx;
+  width: 50%;
+  border-right: 1px solid #eee;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.invite .blue-top .invite-card .card-bottom .right {
+  height: 140rpx;
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.invite .blue-top .invite-card .card-bottom .count {
+  color: #999999;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 16rpx;
+}
+.invite .blue-top .invite-card .card-bottom .count .num {
+  color: #00C8FD;
+  display: inline;
+}
+.invite .blue-top .invite-card .card-bottom .txt {
+  color: #181818;
+  font-size: 24rpx;
+}
+.invite .task {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 686rpx;
+  margin: 0 auto;
+  background: #fff;
+  min-height: 500rpx;
+  border-radius: 20rpx;
+  padding: 30rpx;
+}
+.invite .task .task-title {
+  color: #00C8FD;
+  font-weight: bold;
+  font-size: 32rpx;
+}
+.invite .task .task-text {
+  font-size: 24rpx;
+  color: #181818;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+.invite .task .task-list .task-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32rpx;
+}
+.invite .task .task-list .task-item .task-pic {
+  display: block;
+  width: 96rpx;
+  height: 96rpx;
+  background-size: 70rpx auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #dcf8ff;
+  margin-right: 20rpx;
+}
+.invite .task .task-list .task-item .task-desc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.invite .task .task-list .task-item .task-desc .title {
+  color: #00C8FD;
+  font-size: 28rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+.invite .task .task-list .task-item .task-desc .desc {
+  color: #181818;
+  font-size: 24rpx;
+}
+.invite .invite-btn {
+  width: 686rpx;
+  height: 88rpx;
+  background: #00C8FD;
+  border-radius: 8rpx;
+  line-height: 88rpx;
+  text-align: center;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+  border: 0;
+}
+
