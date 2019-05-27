@@ -1,8 +1,5 @@
 <template>
 	<view class="page-index">
-		<!-- <view class="blue-top">
-			<image src="../../static/images/banner.png" class="banner"></image>
-		</view> -->
 		<swiper id="swiper-box" circular=true :indicator-dots="true" indicator-active-color="#fff" indicator-color="#aaa"
 		 :autoplay="true" :interval="3000" :duration="500">
 			<swiper-item>
@@ -16,9 +13,6 @@
 				</view>
 			</swiper-item>
 		</swiper>
-		<!-- <view class="vip-show" @tap="toRecharge">
-			<image src="../../static/images/capsule.png" class="vip-banner"></image>
-		</view> -->
 		<view class="analysis">
 			<view class="input-box">
 				<input type="text" v-model.trim="inputText" placeholder="将视频链接粘贴在此处">
@@ -26,10 +20,18 @@
 			</view>
 			<view class="analysis-btn" @tap="getVideo">解析</view>
 		</view>
-
-		<view class="video-box" v-if="videoSuccess">
-			<video class="video-player" :src="videoObj.video_url" controls :poster="videoObj.poster"></video>
-			<view class="down-video" @tap="downVideo(videoObj.video_url)">{{downProgress}}</view>
+		<!-- <video class="video-player" objectFit="contain" 
+		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video>
+		<video class="video-player" objectFit="contain" 
+		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video>
+		<video class="video-player" objectFit="contain" 
+		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video>
+		<video class="video-player" objectFit="contain" 
+		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video> -->
+		<view class="video-box" v-show="videoSuccess">
+			<video class="video-player" objectFit="contain" :src="videoObj.video_url" controls :poster="videoObj.poster" @error='errorShow'></video>
+			<view class="down-video" @tap="downVideo(videoObj.video_url)">{{downProgress}}</view> 
+			
 			<view class="down-tips">视频归平台及作者所有，本应用不储存任何视频或图片</view>
 		</view>
 		<view class="support-platform">
@@ -67,9 +69,13 @@
 			return {
 				videoSuccess: false,
 				inputText: '',
+				canTap:true,
 				appList: [],
 				faqList: [],
-				videoObj: {},
+				videoObj: {
+					video_url:'',
+					poster:''
+				},
 				downProgress: ''
 			}
 		},
@@ -114,6 +120,9 @@
 			});
 		},
 		methods: {
+			errorShow(e){
+				console.log(e)
+			},
 			clearText() {
 				this.inputText = "";
 			},
@@ -129,36 +138,38 @@
 				uni.navigateTo({
 					url: "/pages/downApp/downApp"
 				})
+				
 			},
 			toCourse() {
 				uni.navigateTo({
 					url: '/pages/course/course'
 				});
 			},
-			getVideo() {
-				var loginRes = this.$checkLogin('/pages/index/index', 2);
-				if (!loginRes) {
-					return false;
-				}
-				uni.showLoading({
-					title: '解析中',
-					mask: true
-				});
+			videoRequest(){
 				this.$uniRequest(
 					this.$baseUrl + '/v1/dewater/parseContent', {
 						content: this.inputText
 					},
 					(res) => {
-						if (res.data.code == 200) {
-							uni.hideLoading();
+						if (res.data.code == 200) {   
+							
 							var data = res.data.data;
-							this.videoObj = data;
-							this.downProgress = "保存到本地"
-							this.videoSuccess = true;
-							uni.showToast({
-								title: '解析成功',
-								duration: 1500
-							});
+							//截取字符串,二级域名v3,v6开头的ios才能播放
+							var canPlay = data.video_url.slice(9,10);
+							if(canPlay == 3 || canPlay == 6){
+								return this.videoRequest();
+							}else{
+								this.videoObj.video_url = data.video_url;
+								this.videoObj.poster = data.poster;
+								this.downProgress = "保存到本地"
+								this.videoSuccess = true;
+								uni.hideLoading();
+								uni.showToast({
+									title: '解析成功',
+									duration: 1500
+								});
+								this.canTap = true;
+							}
 						} else {
 							uni.hideLoading();
 							uni.showModal({
@@ -168,8 +179,29 @@
 								confirmText: '知道啦'
 							});
 						}
-					}
+					},
+					false
 				)
+			},
+			
+			getVideo() {
+				var loginRes = this.$checkLogin('/pages/index/index', 2);
+				if (!loginRes) {
+					return false;
+				}
+				if(this.canTap == false){
+					return false;
+				}
+				this.videoObj.video_url = '';
+				this.videoObj.poster = '';
+				this.videoSuccess = false;
+				this.canTap = false;
+				uni.showLoading({
+					title: '解析中',
+					mask: true
+				});
+				this.videoRequest()
+				
 			},
 			downVideo(url) {
 				var loginRes = this.$checkLogin('/pages/index/index', 2);
@@ -220,7 +252,8 @@
 							var data = res.data.data;
 							this.appList = data;
 						}
-					}
+					},
+					true
 				)
 			},
 			getFAQ() {
@@ -232,7 +265,8 @@
 							var data = res.data.data;
 							this.faqList = data.sort(this.compare('id'));
 						}
-					}
+					},
+					true
 				)
 			},
 			compare(property) {

@@ -78,7 +78,8 @@
 								icon:'none'
 							})
 						}
-					}
+					},
+					false
 				)
 			}
 		}

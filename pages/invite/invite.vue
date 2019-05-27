@@ -78,7 +78,7 @@
 				console.log(res.target)
 			}
 			return {
-				title: 'Biu去水印',
+				title: '视频一键去水印，支持抖音、火山、快手、头条、西瓜、微博、美拍、映客、陌陌、微视等，方便又快捷！',
 				path: '/pages/index/index',
 				imageUrl: '../../static/images/banner1.png'
 			}
@@ -86,6 +86,7 @@
 		onLoad(e) {
 			this.getTask();
 			this.userPhone = e.num;
+			this.getUserInfo();
 		},
 		methods: {
 			getUserInfo() {
@@ -94,7 +95,8 @@
 					0,
 					(res) => {
 						this.userInfo = res.data.data;
-					}
+					},
+					false
 				)
 			},
 			getTask() {
@@ -109,7 +111,8 @@
 							this.msg = data.msg;
 							this.shareLevel = data.share_level;
 						}
-					}
+					},
+					false
 				)
 			}
 		}

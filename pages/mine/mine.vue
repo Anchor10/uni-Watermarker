@@ -14,37 +14,23 @@
 				<view class="card-bottom">
 					<view class="left">
 						<view class="count">
-							<text class="num">{{userInfo.parse_times || '-'}}</text>
+							<text class="num">{{userInfo.parse_times != null ? userInfo.parse_times : '-'}}</text>
 						</view>
 						<text class="txt">今日剩余解析次数</text>
 					</view>
-					<view class="right">
+					<view class="right" @tap="canRecharge">
 						<view class="count">
 							<text class="num">{{endDate}}</text>
 						</view>
-						<text class="txt">{{login&&!userInfo.vip_end_time?'专享无限解析次数':'会员到期时间'}}</text>
+						<text class="txt">{{login&&userInfo.vip_end_time==null?'专享无限解析次数':'会员到期时间'}}</text>
 					</view>
 				</view>
 			</view>
 		</view>
-		<!-- <view class="logo" @tap="toUserInfo">
-			<image class="logo-img" :src="userInfo.avatar ||avatarUrl"></image>
-			<view class="logo-title">
-				<view class="user-name">{{login ? userInfo.nickname : '点击登录'}}
-					<image class="vip-icon" :src="vipIcon" mode="" v-if="login"></image>
-				</view>
-				<view class="score" v-if="login">
-					剩余解析次数：<text>{{userInfo.parse_times}}</text>次
-				</view>
-				<view class="vip-date" v-if="login && (userInfo.vip_end_time != null)">
-					会员到期时间：<text>{{endDate}}</text>
-				</view>
-			</view>
-		</view> -->
 		<view class="center-list">
 			<view class="center-list-item" @tap="toRecharge">
 				<text class="icon1 recharge-icon"></text>
-				<text class="list-text">我要充值</text>
+				<text class="list-text">会员中心</text>
 				<text class="icon2"></text>
 			</view>
 			<view class="center-list-item" @tap="toInvite">
@@ -103,11 +89,10 @@
 			},
 			endDate(){
 				if(this.userInfo.vip_end_time != null){
-					var date = new Date().getTime();
-					date = Math.floor(date/1000)+this.userInfo.vip_end_time
+					var date = this.userInfo.vip_end_time
 					date = date*1000;
 					var newDate = new Date(date)
-					if(newDate.getFullYear() >= 2050){
+					if(newDate.getFullYear() >= 2019){
 						return '永久';
 					}
 					return newDate.getFullYear() + "-" + (newDate.getMonth() + 1) + "-" + newDate.getDate();
@@ -119,12 +104,6 @@
 			}
 		},
 		onLoad() {
-// 			uni.getStorage({
-// 				key: 'TOKEN',
-// 				success: (res)=> {
-// 					this.token = res.data
-// 				}
-// 			});
 		},
 		onShow() {
 			var value = uni.getStorageSync('TOKEN');
@@ -192,8 +171,14 @@
 					0,
 					(res)=>{
 						this.userInfo = res.data.data;
-					}
+					},
+					false
 				)
+			},
+			canRecharge(){
+				if(this.login&&!this.userInfo.vip_end_time){
+					this.toRecharge();
+				}
 			}
 		}
 	}

@@ -3,13 +3,15 @@
 	// token:0a41939468ecc02ef67d0b41c281a92d752e8db661f09dce2df4eeb9fffb6900
 	//appid:fiev73r9gk
 	// uuid:'00000000-1ee1-c7fb-ffff-ffffd3ce6eb2',
-	function urlRequest(url,param, func) {
-		let baseParam = {
+	function urlRequest(url,param, func, flag) {
+		//flag为true时,将token请求参数的token设置为0;
+		//无需token的请求flag=>true,flag=>false
+		var baseParam = {
 				device:'Mini',
 				system_version:'Mini',
 				sign:'F7F5F3472016A909FF6A510E1DA92505',
 				verid:7,
-				token:"token",
+				token:0,
 				package:'com.videow.mini',
 				uuid:'1',
 				appid:'fierteronzd',
@@ -22,6 +24,9 @@
 			};
 			var TOKEN  = uni.getStorageSync('TOKEN');
 			baseParam.token = TOKEN || 0;
+			if(flag === true){
+				baseParam.token = 0;
+			}
 			//没有额外参数的话传0
 			if(param != 0){
 				var paramObj = {params:JSON.stringify(param)};
@@ -33,18 +38,24 @@
 		uni.request({
 			url: url,
 			data: realParam,
-// 			header:{
-// 				'content-type':'multipart/form-data'
-// 			},
 			method: 'POST',
 			success: res=>{
-				if(res.data.code == 998){
+				if(res.data.code == 998 && baseParam.token != 0){
 					uni.removeStorageSync('TOKEN');
 					uni.showToast({
 						title: res.data.msg,
-						icon:'none'
+						icon:'none',
+						success:()=>{
+							setTimeout(()=>{
+								uni.navigateTo({
+									url:'/pages/login/login'
+								})
+								
+							},1000)
+						}
 					})
-					return;
+					return false;
+					
 				}
 				func(res);
 			},
@@ -54,12 +65,12 @@
 					icon:'none',
 					duration: 3000
 				});
-			},
-			complete:()=>{
-				setTimeout(()=> {
-					uni.hideLoading();
-				}, 1500);
 			}
+			// complete:()=>{
+			// 	setTimeout(()=> {
+			// 		uni.hideLoading();
+			// 	}, 1500);
+			// }
 		});
  
  

@@ -77,7 +77,8 @@
 								uni.navigateBack();
 							},1000)
 						}
-					}
+					},
+					false
 				)
 				
 			}

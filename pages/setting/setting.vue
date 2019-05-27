@@ -27,8 +27,8 @@
 			},
 			loginOut(){
 				uni.showModal({
-					title: '提示',
-					content: '确定要退出嘛',
+					title: '温馨提示',
+					content: '确定要退出当前登录?',
 					success: (res)=> {
 						if (res.confirm) {
 							try {

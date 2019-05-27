@@ -17,7 +17,6 @@
 		}
 	}
 </script>
-
 <style lang="less">
 	@import './about.less';
 </style>

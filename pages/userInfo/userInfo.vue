@@ -93,7 +93,8 @@
 					0,
 					(res)=>{
 						this.userInfo = res.data.data;
-					}
+					},
+					false
 				)
 			},
 			changeAvatar(){
@@ -140,7 +141,8 @@
 								uni.showToast({
 									title:res.data.msg
 								})
-							}
+							},
+							false
 						)
 					},
 					fail: (res)=> {
@@ -164,7 +166,8 @@
 						uni.showToast({
 							title:res.data.msg
 						})
-					}
+					},
+					false
 				)
 			}
 		},

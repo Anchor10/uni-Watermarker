@@ -1,1 +1,0 @@
-<web-view src="{{url}}" bind:__l="__l"></web-view>

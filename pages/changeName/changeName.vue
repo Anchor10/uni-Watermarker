@@ -75,8 +75,11 @@
 							setTimeout(()=>{
 								uni.navigateBack();
 							},1000)
+						}else{
+							console.log(res.data.msg)
 						}
-					}
+					},
+					false
 				)
 				
 			}

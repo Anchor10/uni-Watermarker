@@ -89,13 +89,7 @@
             	"navigationBarTitleText": "编辑资料"
             }
         },
-		{
-		    "path" : "pages/webview/webview",
-		    "style" : {
-		    	"navigationBarTitleText": "微信充值"
-		    }
-		}
-        ,{
+        {
             "path" : "pages/changeName/changeName",
             "style" : {
             	"navigationBarTitleText": "修改昵称"

@@ -97,7 +97,8 @@
 									icon:'none'
 								})
 							}
-						}
+						},
+						false
 					)
 				}
 				
@@ -133,7 +134,8 @@
 								icon:'none'
 							})
 						}
-					}
+					},
+					false
 				)
 			},
 			changePhone(){

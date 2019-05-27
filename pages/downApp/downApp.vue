@@ -10,7 +10,7 @@
 			<text class="app-name">Biu去水印</text>
 			<text class="app-version">V1.0.0</text>
 		</view>
-		<button class="down-btn" open-type="contact">点击前往下载App</button>
+		<button class="down-btn" open-type="contact">回复"666"下载</button>
 	</view>
 </template>
 

@@ -67,7 +67,8 @@
 					0,
 					(res) => {
 						this.userInfo = res.data.data;
-					}
+					},
+					false
 				)
 			},
 			tabChange(item,index){

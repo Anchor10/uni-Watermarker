@@ -80,10 +80,16 @@
 								})
 							}
 							setTimeout(()=>{
-								if(backtype == 1){
-								    uni.redirectTo({url:backpage});
+								if(!backpage){
+									uni.switchTab({
+										url:'/pages/mine/mine'
+									});
 								}else{
-								    uni.switchTab({url:backpage});
+									if(backtype == 1){
+									    uni.redirectTo({url:backpage});
+									}else{
+									    uni.switchTab({url:backpage});
+									}
 								}
 							},1500)
 						}else{
@@ -93,7 +99,8 @@
 								icon:"none"
 							})
 						}
-					}
+					},
+					true
 				)
 			},
 			toRegister(){

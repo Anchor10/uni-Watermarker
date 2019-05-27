@@ -1,0 +1,26 @@
+.change-pwd {
+  padding: 0 32rpx;
+}
+.change-pwd .input-box {
+  height: 64rpx;
+  line-height: 64rpx;
+  border-bottom: 1px solid #EEEEEE;
+  margin-top: 45rpx;
+}
+.change-pwd .input-box .input-text {
+  height: 64rpx;
+  line-height: 64rpx;
+  font-size: 32rpx;
+}
+.change-pwd .change-pwd-btn {
+  width: 686rpx;
+  height: 88rpx;
+  border-radius: 4rpx;
+  color: #fff;
+  background: #00C8FD;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 36rpx;
+  margin-top: 127rpx;
+}
+

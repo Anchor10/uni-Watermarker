@@ -111,7 +111,8 @@
 									icon:'none'
 								})
 							}
-						}
+						},
+						true
 					)
 				}
 				
@@ -163,7 +164,8 @@
 								icon:'none'
 							})
 						}
-					}
+					},
+					true
 				)
 			},
 			agreementShow(){
@@ -174,13 +176,13 @@
 					this.$baseUrl+'/v1/system/appinit',
 					0,
 					(res)=>{
-						console.log(res)
 						if(res.data.code == 200){
 							var data = res.data.data;
 							this.agreement.title = data.agreement.title;
 							this.agreement.content = this.formatP(data.agreement.content);
 						}
-					}
+					},
+					true
 				)
 			}
 		}
