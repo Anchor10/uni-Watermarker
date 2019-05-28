@@ -20,15 +20,7 @@
 			</view>
 			<view class="analysis-btn" @tap="getVideo">解析</view>
 		</view>
-		<!-- <video class="video-player" objectFit="contain" 
-		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video>
-		<video class="video-player" objectFit="contain" 
-		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video>
-		<video class="video-player" objectFit="contain" 
-		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video>
-		<video class="video-player" objectFit="contain" 
-		src="https://v3-dy-x.ixigua.com/b9f1ef00e1d13a57da16eb3cd3b75df0/5ceb6d46/video/m/22084892466f74c4338bee95667a1ac1f8d1162282ff00004ae29edec8e0/?rc=M2VwbXBxZzhubTMzZ2kzM0ApQHRAb0k8OjwzNzU0NDs2NDo4PDNAKXUpQGczdSlAZjN2KUBmbGRqZXpoaGRmOzRAZTAubTViYmJnXy0tYy0wc3MtbyNvI0I0LzMzLTItLS4yLi8tLi9pOmIwcCM6YS1xIzpgLW8jbWwrYitqdDojLy5e#soft.svip8.vip.mp4" controls @error='errorShow'></video> -->
-		<view class="video-box" v-show="videoSuccess">
+		<view class="video-box" v-if="videoSuccess">
 			<video class="video-player" objectFit="contain" :src="videoObj.video_url" controls :poster="videoObj.poster" @error='errorShow'></video>
 			<view class="down-video" @tap="downVideo(videoObj.video_url)">{{downProgress}}</view> 
 			
@@ -151,8 +143,8 @@
 						content: this.inputText
 					},
 					(res) => {
+						this.canTap = false;
 						if (res.data.code == 200) {   
-							
 							var data = res.data.data;
 							//截取字符串,二级域名v3,v6开头的ios才能播放
 							var canPlay = data.video_url.slice(9,10);
@@ -168,7 +160,7 @@
 									title: '解析成功',
 									duration: 1500
 								});
-								this.canTap = true;
+								
 							}
 						} else {
 							uni.hideLoading();
@@ -179,6 +171,7 @@
 								confirmText: '知道啦'
 							});
 						}
+						this.canTap = true;
 					},
 					false
 				)
@@ -195,7 +188,7 @@
 				this.videoObj.video_url = '';
 				this.videoObj.poster = '';
 				this.videoSuccess = false;
-				this.canTap = false;
+				
 				uni.showLoading({
 					title: '解析中',
 					mask: true
@@ -263,12 +256,14 @@
 					(res) => {
 						if (res.data.code == 200) {
 							var data = res.data.data;
+							//faq列表根据id从小到大排列
 							this.faqList = data.sort(this.compare('id'));
 						}
 					},
 					true
 				)
 			},
+			//排序
 			compare(property) {
 				return function(a, b) {
 					var value1 = a[property];

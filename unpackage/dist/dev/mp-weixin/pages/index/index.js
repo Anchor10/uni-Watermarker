@@ -65,14 +65,6 @@
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -161,8 +153,8 @@ var _default =
         content: this.inputText },
 
       function (res) {
+        _this2.canTap = false;
         if (res.data.code == 200) {
-
           var data = res.data.data;
           //截取字符串,二级域名v3,v6开头的ios才能播放
           var canPlay = data.video_url.slice(9, 10);
@@ -178,7 +170,7 @@ var _default =
               title: '解析成功',
               duration: 1500 });
 
-            _this2.canTap = true;
+
           }
         } else {
           uni.hideLoading();
@@ -189,6 +181,7 @@ var _default =
             confirmText: '知道啦' });
 
         }
+        _this2.canTap = true;
       },
       false);
 
@@ -205,7 +198,7 @@ var _default =
       this.videoObj.video_url = '';
       this.videoObj.poster = '';
       this.videoSuccess = false;
-      this.canTap = false;
+
       uni.showLoading({
         title: '解析中',
         mask: true });
@@ -273,12 +266,14 @@ var _default =
       function (res) {
         if (res.data.code == 200) {
           var data = res.data.data;
+          //faq列表根据id从小到大排列
           _this5.faqList = data.sort(_this5.compare('id'));
         }
       },
       true);
 
     },
+    //排序
     compare: function compare(property) {
       return function (a, b) {
         var value1 = a[property];
